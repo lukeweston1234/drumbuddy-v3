@@ -1,5 +1,6 @@
 import React, { useRef, useState } from "react";
 import { Canvas, useFrame } from "@react-three/fiber";
+import { DrumMachine } from "./models/DrumMachine";
 import {
   Environment,
   Backdrop,
@@ -40,13 +41,13 @@ function Scene() {
           polar={[-Math.PI / 3, Math.PI / 3]}
           azimuth={[-Math.PI / 1.4, Math.PI / 2]}
         >
-          <Box position={[0, 0, 0]} />
+          <DrumMachine position={[0, 0, 0]} />
         </PresentationControls>
         <Backdrop
           receiveShadow
-          scale={[20, 5, 5]}
+          scale={[40, 5, 5]}
           floor={1.5}
-          position={[0, -0.5, -2]}
+          position={[0, -1, -4]}
         >
           <meshPhysicalMaterial roughness={0.8} color="#0a0817" />
         </Backdrop>
