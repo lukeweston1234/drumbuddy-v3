@@ -23,7 +23,7 @@ export function DrumButton(props: any) {
         }}
       >
         <meshStandardMaterial
-          color={props.activeSoundIndex == props.index ? "#d4dfff" : "#5972ba"}
+          color={props.activeSoundIndex == props.index ? "#8593de" : "#4a4f6b"}
         />
       </mesh>
     </group>

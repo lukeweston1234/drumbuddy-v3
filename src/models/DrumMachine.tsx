@@ -6,6 +6,7 @@ import { SequencerButton } from "./SequencerButton";
 export function DrumMachine(props: any) {
   const { nodes, materials } = useGLTF("/drummachine.glb");
   const [activeSoundIndex, setActiveSoundIndex] = useState(0);
+  const [activeSequencerIndex, setActiveSequencerIndex] = useState(0);
   return (
     <group {...props} dispose={null}>
       <mesh
@@ -44,6 +45,20 @@ export function DrumMachine(props: any) {
           />
         );
       })}
+      {[...Array(16).keys()].map((n) => {
+        const x = n * 0.23 + 1.15;
+        const y = 0;
+        const z = 0;
+        return (
+          <SequencerButton
+            key={n}
+            index={n}
+            position={[x, y, z]}
+            activeSequencerIndex={activeSequencerIndex}
+          />
+        );
+      })}
+
       <mesh
         castShadow
         receiveShadow

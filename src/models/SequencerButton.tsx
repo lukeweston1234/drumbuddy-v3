@@ -9,10 +9,15 @@ export function SequencerButton(props: any) {
         castShadow
         receiveShadow
         geometry={nodes.Cube001.geometry}
-        material={materials["Material.001"]}
         position={[-2.88, 0.3, 0.82]}
         scale={0.05}
-      />
+      >
+        <meshStandardMaterial
+          color={
+            props.activeSequencerIndex == props.index ? "#8593de" : "#4a4f6b"
+          }
+        />
+      </mesh>
     </group>
   );
 }
