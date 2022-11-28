@@ -11,7 +11,7 @@ export function DrumButton(props: any) {
         receiveShadow
         geometry={nodes.Cube002.geometry}
         position={[-2.65, 0.3, -0.56]}
-        scale={hover ? [0.2, 0.1, 0.2] : [0.18, 0.05, 0.18]}
+        scale={hover ? [0.2, 0.07, 0.2] : [0.18, 0.05, 0.18]}
         onPointerOver={() => {
           setHover(true);
         }}
@@ -20,6 +20,8 @@ export function DrumButton(props: any) {
         }}
         onClick={() => {
           props.setActiveSoundIndex(props.index);
+          props.sound.play();
+          //ignore
         }}
       >
         <meshStandardMaterial
