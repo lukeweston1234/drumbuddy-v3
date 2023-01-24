@@ -24,10 +24,13 @@ export function StopButton(props: any) {
         }}
         onClick={() => {
           props.setActiveControlButton("stop");
+          props.setIsPlaying(false);
+          props.setActiveSequencerIndex(0);
         }}
       >
         <meshStandardMaterial
           color={props.activeControlButton == "stop" ? "#8593de" : "#4a4f6b"}
+          emissive={props.activeControlButton == "stop" ? "#8593de" : "#4a4f6b"}
         />
       </mesh>
     </group>

@@ -1,6 +1,6 @@
 import React, { useRef, useState } from "react";
 import { Canvas, useFrame } from "@react-three/fiber";
-import { DrumMachine } from "./models/DrumMachine";
+import { DrumMachine } from "./components/DrumMachine";
 import {
   Environment,
   Backdrop,
@@ -31,7 +31,6 @@ function Scene() {
   return (
     <div className="h-full">
       <Canvas camera={{ position: [0, 4, 1.5], fov: 80 }}>
-        <ambientLight />
         <pointLight position={[10, 10, 10]} />
         <PresentationControls
           global

@@ -23,10 +23,14 @@ export function PauseButton(props: any) {
         }}
         onClick={() => {
           props.setActiveControlButton("pause");
+          props.setIsPlaying(false);
         }}
       >
         <meshStandardMaterial
           color={props.activeControlButton == "pause" ? "#8593de" : "#4a4f6b"}
+          emmisive={
+            props.activeControlButton == "pause" ? "#8593de" : "#4a4f6b"
+          }
         />
       </mesh>
       <mesh
@@ -45,10 +49,14 @@ export function PauseButton(props: any) {
         }}
         onClick={() => {
           props.setActiveControlButton("pause");
+          props.setIsPlaying(false);
         }}
       >
         <meshStandardMaterial
           color={props.activeControlButton == "pause" ? "#8593de" : "#4a4f6b"}
+          emmisive={
+            props.activeControlButton == "pause" ? "#8593de" : "#4a4f6b"
+          }
         />
       </mesh>
     </group>

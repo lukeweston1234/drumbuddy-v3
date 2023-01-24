@@ -21,11 +21,13 @@ export function DrumButton(props: any) {
         onClick={() => {
           props.setActiveSoundIndex(props.index);
           props.sound.play();
-          //ignore
         }}
       >
         <meshStandardMaterial
           color={props.activeSoundIndex == props.index ? "#8593de" : "#4a4f6b"}
+          emissive={
+            props.activeSoundIndex == props.index ? "#8593de" : "#4a4f6b"
+          }
         />
       </mesh>
     </group>
